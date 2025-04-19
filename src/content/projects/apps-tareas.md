@@ -4,7 +4,7 @@ description: "Una aplicación web que permite a los usuarios crear, editar, elim
 tags: ["JavaScript", "HTML", "CSS", "LocalStorage", "UX"]
 pubDate: 2024-08-01
 updatedDate: 2024-10-10
-heroImage: "/images/projects/apps-tareas-cover.png"
+heroImage: "/Portafolio_Personal/images/projects/apps-tareas-cover.png"
 repoUrl: "https://github.com/JehovannyMaradiaga/task_app"
 demoUrl: "https://github.com/JehovannyMaradiaga/task_app"
 ---
