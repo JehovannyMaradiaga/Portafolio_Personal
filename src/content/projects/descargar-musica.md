@@ -4,7 +4,7 @@ description: "Aplicación que permite descargar audio de videos de YouTube en fo
 tags: ["Node.js", "JavaScript", "YouTube API", "FFmpeg", "UX"]
 pubDate: 2024-08-05
 updatedDate: 2024-10-15
-heroImage: "/Portafolio_Personal/images/projects/descargar-musica-cover.png"
+heroImage: "/portafolio-personal/images/projects/descargar-musica-cover.png"
 repoUrl: "https://github.com/JehovannyMaradiaga/Descargar_Musica_mp3"
 demoUrl: "https://github.com/JehovannyMaradiaga/Descargar_Musica_mp3"
 ---
