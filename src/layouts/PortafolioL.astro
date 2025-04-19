@@ -1,0 +1,50 @@
+---
+/**
+ * BaseLayout.astro
+ *
+ * 📌 UTILIDAD:
+ * Este layout define la estructura base de todo el sitio. Incluye el encabezado HTML,
+ * metadatos (SEO), y un espacio (`<slot />`) donde se inyecta el contenido de cada página.
+ *
+ * ✅ DÓNDE SE USA:
+ * - En todas las páginas del portafolio (`index.astro`, `about.astro`, `projects.astro`, etc.)
+ * - Permite aplicar una estructura común sin repetir código.
+ */
+
+ import { SITE_TITLE, SITE_DESCRIPTION, SITE_URL } from '../consts';
+ import Footer  from '../components/Footer.astro'
+ import Header from '../components/Header.astro'
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Básico -->
+    <title>{SITE_TITLE}</title>
+    <meta name="description" content={SITE_DESCRIPTION} />
+    <meta property="og:title" content={SITE_TITLE} />
+    <meta property="og:description" content={SITE_DESCRIPTION} />
+    <meta property="og:url" content={SITE_URL} />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Puedes agregar un favicon si deseas -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+
+  </head>
+
+  <body class="font-sans bg-white text-gray-800">
+    <!-- Importación del componente del header -->
+    <Header />
+
+    <main>
+      <slot />
+    </main>
+
+    <!-- Importacion del componente del footer -->
+    <Footer />
+  </body>
+</html>

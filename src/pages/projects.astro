@@ -1,0 +1,74 @@
+---
+/**
+ * Projects.astro
+ *
+ * 📌 UTILIDAD:
+ * Página dedicada a mostrar los proyectos realizados por el desarrollador.
+ * Se presentan en formato de tarjetas con título, imagen, descripción y enlaces.
+ */
+
+ import '../styles/projects.css';
+import PortafolioL from '../layouts/PortafolioL.astro';
+import { getCollection } from 'astro:content';
+
+// Cargar todos los proyectos desde la colección definida
+const projects = await getCollection('projects');
+---
+
+<PortafolioL>
+  <section class="projects-hero">
+    <div class="projects-hero-container">
+      <h1 class="projects-title">Mis Proyectos</h1>
+      <p class="projects-subtitle">
+        Aquí puedes ver una selección de los trabajos en los que he participado.
+      </p>
+    </div>
+  </section>
+
+  <section class="projects-gallery">
+    <div class="projects-grid">
+      {projects.map((project) => (
+        <div class="project-card">
+          {project.data.heroImage && (
+            <img
+              src={project.data.heroImage}
+              alt={project.data.title}
+              class="project-image"
+              loading="lazy"
+            />
+          )}
+
+          <div class="project-content">
+            <h3 class="project-title">{project.data.title}</h3>
+            <p class="project-description">
+              {project.data.description}
+            </p>
+
+            <div class="project-links">
+              {project.data.demoUrl && (
+                <a
+                  href={project.data.demoUrl}
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Ver demo
+                </a>
+              )}
+              {project.data.repoUrl && (
+                <a
+                  href={project.data.repoUrl}
+                  class="project-link repo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Código fuente
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+</PortafolioL>

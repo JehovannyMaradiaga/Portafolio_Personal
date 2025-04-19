@@ -1,0 +1,29 @@
+/* styles/footer.css */
+
+/* Estilos generales del footer */
+footer {
+    background-color: #1a1a1a; /* Gris oscuro para destacar el contenido */
+    color: #f1f1f1; /* Blanco suave para buena legibilidad */
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-size: 0.875rem; /* Tamaño de fuente pequeño pero legible */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-top: 1px solid #333;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Texto del párrafo */
+  footer p {
+    margin: 0;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Responsive para pantallas pequeñas */
+  @media (max-width: 480px) {
+    footer {
+      font-size: 0.75rem;
+      padding: 1rem 0.5rem;
+    }
+  }
+  

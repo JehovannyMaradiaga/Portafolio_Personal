@@ -1,0 +1,19 @@
+---
+/**
+ * Footer.astro
+ *
+ * 📌 UTILIDAD:
+ * Este componente contiene el pie de página del sitio. Muestra el copyright
+ * y cualquier otra información adicional, como un aviso de derechos reservados.
+ * 
+ * ✅ DÓNDE SE UTILIZA:
+ * - En todas las páginas que usan el layout base (por ejemplo, `index.astro`, `about.astro`).
+ */
+
+ import '../styles/footer.css'
+ import { SITE_TITLE } from '../consts';
+---
+
+<footer class="bg-gray-900 text-white py-6 text-center text-sm">
+  <p>&copy; {new Date().getFullYear()} {SITE_TITLE}. Todos los derechos reservados.</p>
+</footer>

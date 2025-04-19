@@ -1,0 +1,50 @@
+---
+/**
+ * about.astro
+ *
+ * 📌 UTILIDAD:
+ * Página "Acerca de mí" del portafolio, con información profesional y personal.
+ * Utiliza estilos definidos en about.css para mantener coherencia visual.
+ */
+
+ import '../styles/about.css';
+import { SITE_TITLE } from '../consts';
+import PortafolioL from '../layouts/PortafolioL.astro';
+---
+
+<PortafolioL>
+  <section class="about-hero">
+    <div class="about-hero-container">
+      <h1 class="about-title">Acerca de mí</h1>
+      <p class="about-subtitle">Conoce más sobre mi trayectoria, valores y visión profesional.</p>
+    </div>
+  </section>
+
+  <section class="about-content">
+    <div class="about-container">
+      <div class="about-text">
+        <h2 class="section-heading">Mi Trayectoria</h2>
+        <p>
+          Soy un desarrollador web apasionado por la creación de soluciones digitales funcionales y estéticas. Mi enfoque combina diseño, accesibilidad y buenas prácticas en desarrollo para lograr experiencias óptimas en la web.
+        </p>
+        <p>
+          A lo largo de mi carrera he trabajado con tecnologías como HTML, CSS, JavaScript, Astro, React, y Node.js, participando en proyectos que van desde sitios institucionales hasta aplicaciones interactivas.
+        </p>
+      </div>
+
+      <div class="about-text">
+        <h2 class="section-heading">Mi Filosofía</h2>
+        <p>
+          Creo firmemente en el aprendizaje continuo, la mejora constante y el trabajo colaborativo. Cada línea de código que escribo refleja mi compromiso con la calidad, la eficiencia y la claridad.
+        </p>
+      </div>
+
+      <div class="about-text">
+        <h2 class="section-heading">Objetivo Profesional</h2>
+        <p>
+          Mi meta es seguir creciendo como profesional en entornos dinámicos donde pueda aportar mis conocimientos, aprender nuevas tecnologías y desarrollar soluciones innovadoras que generen un impacto real.
+        </p>
+      </div>
+    </div>
+  </section>
+</PortafolioL>

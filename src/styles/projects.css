@@ -1,0 +1,88 @@
+/* projects.css */
+
+/* Hero section */
+.projects-hero {
+    background: linear-gradient(to right, #6366f1, #8b5cf6, #ec4899);
+    padding: 80px 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  .projects-hero-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .projects-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .projects-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.9;
+  }
+  
+  /* Gallery section */
+  .projects-gallery {
+    padding: 60px 20px;
+    background-color: #f9fafb;
+  }
+  
+  .projects-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+  }
+  
+  /* Card styles */
+  .project-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .project-content {
+    padding: 20px;
+  }
+  
+  .project-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project-description {
+    font-size: 0.95rem;
+    color: #4b5563;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  .project-link {
+    font-weight: 500;
+    color: #3b82f6;
+    text-decoration: none;
+  }
+  
+  .project-link:hover {
+    text-decoration: underline;
+  }
+  

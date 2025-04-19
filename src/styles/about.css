@@ -1,0 +1,65 @@
+/* about.css */
+
+/* Sección Hero */
+.about-hero {
+    background: linear-gradient(to right, #3b82f6, #9333ea, #ec4899);
+    padding: 80px 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  .about-hero-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .about-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.9;
+  }
+  
+  /* Contenido Principal */
+  .about-content {
+    background-color: #f9fafb;
+    padding: 60px 20px;
+  }
+  
+  .about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .about-text {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+  }
+  
+  .about-text:hover {
+    transform: translateY(-4px);
+  }
+  
+  .section-heading {
+    font-size: 1.5rem;
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+  
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #4b5563;
+    margin-bottom: 1rem;
+  }
+  

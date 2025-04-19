@@ -1,16 +1,56 @@
 ---
+/**
+ * index.astro
+ *
+ * 📌 UTILIDAD:
+ * Página principal del portafolio personal, estilizada con CSS personalizado.
+ * Contiene una sección de bienvenida y una galería de proyectos.
+ *
+ * ✅ DÓNDE SE UTILIZA:
+ * - Página de inicio del portafolio.
+ */
 
+import '../styles/home.css';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import PortafolioL from '../layouts/PortafolioL.astro';
+import { getCollection } from 'astro:content';
+
+// Obtener los proyectos desde la colección
+const projects = await getCollection('projects');
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<PortafolioL>
+  <!-- Sección Hero -->
+  <section class="hero-section">
+    <div class="hero-background"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">{SITE_TITLE}</h1>
+      <p class="hero-description">{SITE_DESCRIPTION}</p>
+      <a href="/about" class="hero-button">Conoce más sobre mí</a>
+    </div>
+  </section>
+
+  <!-- Sección de Proyectos -->
+  <section class="projects-section">
+    <h2 class="projects-title">Mis Proyectos</h2>
+    <div class="projects-grid">
+      {projects.slice(0, 3).map((project) => (
+        <div class="project-card">
+          <img
+            src={project.data.heroImage}
+            alt={project.data.title}
+            class="project-image"
+          />
+          <div class="project-content">
+            <h3 class="project-title">{project.data.title}</h3>
+            <p class="project-description">{project.data.description}</p>
+            <a href={project.data.repoUrl} class="project-link" target="_blank">Ver Proyecto</a>
+          </div>
+        </div>
+      ))}
+    </div>
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="/projects" class="hero-button">Ver todos los proyectos</a>
+    </div>
+  </section>
+</PortafolioL>
