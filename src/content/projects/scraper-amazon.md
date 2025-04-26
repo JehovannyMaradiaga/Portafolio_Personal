@@ -4,7 +4,7 @@ description: "Herramienta de scraping que extrae información clave de productos
 tags: ["Python", "BeautifulSoup", "Requests", "Scraping", "Data Analysis"]
 pubDate: 2024-07-15
 updatedDate: 2024-08-01
-heroImage: "/portafolio-personal/images/projects/scraper-amazon-cover.png"
+heroImage: "/portafolio-personal/images/projects/scraper-amazon.png"
 repoUrl: "https://github.com/JehovannyMaradiaga/scraper_amazon"
 demoUrl: "https://github.com/JehovannyMaradiaga/scraper_amazon"
 ---
